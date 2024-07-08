@@ -3,7 +3,7 @@
     font-family: 'Poppins';
     src: url('./fonts/Poppins/Poppins-ExtraLight.ttf');
     font-weight: 200;
-    font-style: normal
+    font-style: normal;
 }
 
 /* Poppins - Regular */
@@ -11,7 +11,7 @@
     font-family: 'Poppins';
     src: url('./fonts/Poppins/Poppins-Regular.ttf');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 
 /* Poppins - Black*/
@@ -19,14 +19,13 @@
     font-family: 'Poppins';
     src: url('./fonts/Poppins/Poppins-Black.ttf');
     font-weight: 900;
-    font-style: normal
+    font-style: normal;
 }
-
-
 
 /* global styles */
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: Poppins;
@@ -37,7 +36,8 @@ main {
     margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: black;
 }
 
@@ -60,14 +60,13 @@ a {
     text-decoration: none;
 }
 
-
 /* navbar */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:fixed;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 10px 10px;
@@ -96,7 +95,7 @@ a {
 }
 
 .nav-links {
-    display:inline;
+    display: inline;
 }
 
 .nav-links a {
@@ -106,9 +105,8 @@ a {
 }
 
 .nav-links a:hover {
-    color:hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 50%);
 }
-
 
 /* main sections */
 
@@ -122,13 +120,10 @@ main section {
     padding-top: 50px;
 }
 
-
-
-
 /* landing section */
 
 #landing {
-    justify-content:space-around;
+    justify-content: space-around;
     height: 100vh;
     padding-top: 0;
 }
@@ -142,7 +137,7 @@ main section {
     display: inline-block;
     outline: 10px solid black;
     border-radius: 10%;
-    margin:0;
+    margin: 0;
     max-width: 100%;
     height: auto;
 }
