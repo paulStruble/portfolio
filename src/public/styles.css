@@ -143,10 +143,21 @@ main section {
     height: auto;
 }
 
-
 /* intro section */
 
-.skills-container {
+.inactive-heading {
+    color: rgb(200, 200, 200);
+}
+
+.inactive-container {
+    display: none;
+}
+
+.inactive-container div {
+    display: none;
+}
+
+#skills-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -168,4 +179,7 @@ main section {
     display: block;
     width: 100px;
     height: 100px;
+}
+
+#coursework-cointainer {
 }
