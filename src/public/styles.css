@@ -186,6 +186,48 @@ footer {
 #coursework-cointainer {
 }
 
+/* project */
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    border-radius: 20px;
+    padding: 30px 50px;
+    margin-top: 20px;
+}
+
+.project-content {
+    display: inline-block;
+    width: 65%;
+    padding-right: 50px;
+}
+
+.project-content h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.project-content p {
+    text-align: justify;
+}
+
+.content-right {
+    padding-left: 50px;
+}
+
+.content-right h3 {
+    text-align: right;
+}
+
+.project img {
+    width: 35%;
+    height: fit-content;
+    border-radius: 25px;
+}
+
 /* footer */
 
 footer {
