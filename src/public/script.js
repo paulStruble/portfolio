@@ -19,7 +19,13 @@ function activateSkillsSection(section) {
     }
 }
 
+function setCopyrightYear() {
+    const currentYear = new Date().getUTCFullYear(); // TODO: dynamic
+    document.getElementById('current-year').innerHTML = currentYear;
+}
+
 // Initalize skills section with skills active (coursework inactive)
 document.addEventListener('DOMContentLoaded', () => {
-    activateSkillsSection('skills');
+    activateSkillsSection('skills'); // load skills section
+    setCopyrightYear();
 });

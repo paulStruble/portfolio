@@ -25,7 +25,8 @@
 /* global styles */
 
 html,
-body {
+body,
+footer {
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
@@ -111,7 +112,8 @@ a {
 
 /* main sections */
 
-main section {
+main section,
+footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -182,4 +184,15 @@ main section {
 }
 
 #coursework-cointainer {
+}
+
+/* footer */
+
+footer {
+    justify-content: center;
+    height: 50px;
+}
+
+footer p {
+    font-size: 10pt;
 }
