@@ -168,6 +168,18 @@ footer {
     list-style: none;
 }
 
+#skills-container div {
+    background-color: rgb(242, 242, 242);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.skill-icons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
 .skill {
     display: inline-block;
     /* background-color: black; */
