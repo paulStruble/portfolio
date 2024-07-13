@@ -1,3 +1,37 @@
+function updatePrismPosition() {
+    // get elements from DOM
+    const profileImage = document.getElementById('profile-image');
+    const prismContainer = document.getElementById('landing-background');
+    const prismGraphic = document.getElementById('prism-graphic');
+
+    // get pfp and prism rectangles (for position/dimensions)
+    const profileBox = profileImage.getBoundingClientRect();
+    const graphicBox = prismGraphic.getBoundingClientRect();
+
+    // get coords for center of pfp
+    const profileCenterX = profileBox.left + profileBox.width / 2;
+    const profileCenterY = profileBox.right + profileBox.height / 2;
+
+    // calculate coords for prism
+    const graphicLeft = profileCenterX - graphicBox.width / 2;
+    const graphicRight = profileCenterY - graphicBox.height / 2;
+
+    // update coords for prism
+    prismGraphic.style.left = `${graphicLeft}px`;
+    prismGraphic.style.right = `${graphicRight}px`;
+}
+
+function updatePrismRotation() {
+    const prism = document.getElementById('prism-graphic');
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const normalizedScroll = scrollTop / maxScroll;
+
+    const rotation = Math.log2(scrollY + 20) * 2 - 18; // calculate rotation
+
+    prism.style.rotate = `${rotation}deg`; // perform rotation
+}
+
 function activateSkillsSection(section) {
     skillsHeading = document.getElementById('skills-heading');
     courseworkHeading = document.getElementById('coursework-heading');
@@ -26,6 +60,20 @@ function setCopyrightYear() {
 
 // Initalize skills section with skills active (coursework inactive)
 document.addEventListener('DOMContentLoaded', () => {
+    updatePrismPosition();
+    updatePrismRotation();
     activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
+});
+
+// Handle scroll event
+document.addEventListener('scroll', () => {
+    updatePrismPosition();
+    updatePrismRotation();
+});
+
+// Handle resize event
+document.addEventListener('resize', () => {
+    updatePrismPosition();
+    updatePrismRotation();
 });
