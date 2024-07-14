@@ -59,8 +59,34 @@ function setCopyrightYear() {
 document.addEventListener('DOMContentLoaded', () => {
     updatePrismPosition();
     updatePrismRotation();
+    updatePrismPosition();
+    updatePrismRotation();
     activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
+});
+
+// Handle scroll event
+document.addEventListener('scroll', () => {
+    updatePrismPosition();
+    updatePrismRotation();
+});
+
+// Handle resize event
+document.addEventListener('resize', () => {
+    updatePrismPosition();
+    updatePrismRotation();
+});
+
+// Handle scroll event
+document.addEventListener('scroll', () => {
+    updatePrismPosition();
+    updatePrismRotation();
+});
+
+// Handle resize event
+document.addEventListener('resize', () => {
+    updatePrismPosition();
+    updatePrismRotation();
 });
 
 // Handle scroll event
