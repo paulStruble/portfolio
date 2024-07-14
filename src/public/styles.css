@@ -199,6 +199,10 @@ footer {
     margin: 20px;
 }
 
+#skills-container h3 {
+    text-align: center;
+}
+
 .skill-icons-container {
     display: flex;
     justify-content: center;
