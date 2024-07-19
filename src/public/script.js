@@ -59,7 +59,7 @@ function setCopyrightYear() {
 document.addEventListener('DOMContentLoaded', () => {
     updatePrismPosition();
     updatePrismRotation();
-    activateSkillsSection('skills'); // load skills section
+    // activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
 });
 
