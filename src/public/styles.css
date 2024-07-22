@@ -255,26 +255,27 @@ footer {
 
 /* project */
 
+#projects h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
 .project {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
-    background-color: rgb(242, 242, 242);
-    border-radius: 20px;
-    padding: 30px 50px;
-    margin-top: 20px;
+    /* background-color: rgb(242, 242, 242); */
+    /* border-radius: 20px; */
+    padding: 10px 50px;
+    margin: 35px 0;
+    border-left: 5px solid black;
 }
 
 .project-content {
     display: inline-block;
     width: 65%;
     padding: 0 50px;
-}
-
-.project-content h3 {
-    font-size: 32px;
-    margin: 0;
 }
 
 .project-content p {
@@ -286,7 +287,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .project-github {
