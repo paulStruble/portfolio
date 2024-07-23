@@ -253,7 +253,7 @@ footer {
 #coursework-cointainer {
 }
 
-/* project */
+/* projects - main */
 
 #projects h3 {
     font-size: 32px;
@@ -321,6 +321,107 @@ footer {
     max-width: 100%;
     max-height: 100%;
     border-radius: 25px;
+}
+
+/* projects - extra */
+
+.scroll-button {
+    font-family: poppins, sans-serif;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: none;
+    z-index: 2;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.extra-projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.extra-projects-wrapper {
+    width: 95%;
+}
+
+.extra-projects-wrapper::before,
+.extra-projects-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.extra-projects-wrapper::before {
+    left: 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.extra-projects-wrapper::after {
+    right: 0;
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.extra-projects {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.extra-project {
+    min-width: 300px;
+    text-align: center;
+    /* background-color: aliceblue; */
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.extra-project h4 {
+    margin: 0;
+}
+
+.extra-project p {
+    font-size: 10pt;
+    margin: 5px 0 10px 0;
+}
+
+.extra-image-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.extra-project img {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: solid black 5px;
+    border-radius: 15px;
 }
 
 /* footer */

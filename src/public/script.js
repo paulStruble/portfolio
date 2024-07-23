@@ -55,12 +55,34 @@ function setCopyrightYear() {
     document.getElementById('current-year').innerHTML = currentYear;
 }
 
+function activateOtherProjects() {
+    const scrollAmount = 300;
+    const extraProjects = document.querySelector('.extra-projects');
+    const scrollLeft = document.querySelector('.scroll-button.left');
+    const scrollRight = document.querySelector('.scroll-button.right');
+
+    let scrollPos = 0;
+
+    scrollLeft.addEventListener('click', () => {
+        if (scrollPos > 0) {
+            scrollPos -= scrollAmount;
+            extraProjects.style.transform = `translateX(-${scrollPos}px)`;
+        }
+    });
+
+    scrollRight.addEventListener('click', () => {
+        scrollPos += scrollAmount;
+        extraProjects.style.transform = `translateX(-${scrollPos}px)`;
+    });
+}
+
 // Initalize skills section with skills active (coursework inactive)
 document.addEventListener('DOMContentLoaded', () => {
     updatePrismPosition();
     updatePrismRotation();
     // activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
+    activateOtherProjects(); // other projects scrolling
 });
 
 // Handle scroll event
