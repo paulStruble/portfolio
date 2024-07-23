@@ -393,35 +393,46 @@ footer {
 }
 
 .extra-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 300px;
     text-align: center;
-    /* background-color: aliceblue; */
     border-radius: 15px;
     border: 2px solid black;
     padding: 10px;
     box-sizing: border-box;
 }
 
-.extra-project h4 {
+.extra-text-wrapper h4 {
     margin: 0;
 }
 
-.extra-project p {
+.extra-text-wrapper p {
     font-size: 10pt;
     margin: 5px 0 10px 0;
 }
 
-.extra-image-wrapper {
-    width: 100%;
-    box-sizing: border-box;
+.extra-skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.extra-project img {
+.extra-skills-container img {
+    height: 50px;
+    border: none;
+    margin: 10px 0;
+}
+
+.extra-image {
     display: block;
     max-width: 100%;
     box-sizing: border-box;
     border: solid black 5px;
     border-radius: 15px;
+    margin: 10px 0;
 }
 
 /* footer */
