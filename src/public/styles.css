@@ -402,18 +402,30 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     min-width: 300px;
-    text-align: center;
     border-radius: 15px;
     border: 2px solid black;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.extra-text-wrapper h4 {
+.extra-header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.extra-header h4 {
     margin: 0;
 }
 
+.extra-header img {
+    max-height: 24px;
+    margin-right: 8px;
+}
+
 .extra-text-wrapper p {
+    text-align: justify;
     font-size: 10pt;
     margin: 5px 0 10px 0;
 }
