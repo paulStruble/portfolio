@@ -294,10 +294,11 @@ footer {
     display: block;
     max-width: 2.5em;
     flex-shrink: 0;
+    transition: transform ease 0.2s;
 }
 
 .project-github:hover {
-    scale: 110%;
+    transform: scale(1.1);
 }
 
 .project-skills-container {
