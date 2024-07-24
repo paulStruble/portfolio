@@ -135,6 +135,7 @@ footer {
     background-color: black;
     overflow: hidden;
     z-index: -1;
+    transition: rotate 5s ease;
 }
 
 #prism-graphic {
@@ -153,13 +154,15 @@ footer {
 }
 
 #landing-welcome {
+    font-size: 72px;
+    text-align: center;
     color: rgba(255, 255, 255, 0.5);
     text-shadow: 0 0 10em, 0 0 4px;
 }
 
 #paul {
     color: white;
-    font-size: 1.4em;
+    font-size: 2.5em;
 }
 
 #profile-image {
@@ -168,7 +171,7 @@ footer {
     margin: 0;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 0 100px;
+    box-shadow: 0 0 150px black
 }
 
 #landing-gradient {
