@@ -55,26 +55,78 @@ function setCopyrightYear() {
     document.getElementById('current-year').innerHTML = currentYear;
 }
 
-function activateOtherProjects() {
-    const scrollAmount = 300;
-    const extraProjects = document.querySelector('.extra-projects');
+function scrollCourseProjects(direction) {
+    // get projects from DOM
+    const proj0 = document.querySelector('.extra-project.pos-0');
+    const proj1 = document.querySelector('.extra-project.pos-1');
+    const proj2 = document.querySelector('.extra-project.pos-2');
+    const proj3 = document.querySelector('.extra-project.pos-3');
+    const proj4 = document.querySelector('.extra-project.pos-4');
+    const proj5 = document.querySelector('.extra-project.pos-5');
+    const proj6 = document.querySelector('.extra-project.pos-6');
+    const proj7 = document.querySelector('.extra-project.pos-7');
+    const proj8 = document.querySelector('.extra-project.pos-8');
+    const proj9 = document.querySelector('.extra-project.pos-9');
+    const proj10 = document.querySelector('.extra-project.pos-10');
+    const proj11 = document.querySelector('.extra-project.pos-11');
+
+    // remove current position class
+    proj0.classList.remove('pos-0');
+    proj1.classList.remove('pos-1');
+    proj2.classList.remove('pos-2');
+    proj3.classList.remove('pos-3');
+    proj4.classList.remove('pos-4');
+    proj5.classList.remove('pos-5');
+    proj6.classList.remove('pos-6');
+    proj7.classList.remove('pos-7');
+    proj8.classList.remove('pos-8');
+    proj9.classList.remove('pos-9');
+    proj10.classList.remove('pos-10');
+    proj11.classList.remove('pos-11');
+
+    // add next position class
+    if (direction === 'left') {
+        // scroll left
+        proj0.classList.add('pos-1');
+        proj1.classList.add('pos-2');
+        proj2.classList.add('pos-3');
+        proj3.classList.add('pos-4');
+        proj4.classList.add('pos-5');
+        proj5.classList.add('pos-6');
+        proj6.classList.add('pos-7');
+        proj7.classList.add('pos-8');
+        proj8.classList.add('pos-9');
+        proj9.classList.add('pos-10');
+        proj10.classList.add('pos-11');
+        proj11.classList.add('pos-0');
+    } else if (direction === 'right') {
+        // scroll right
+        proj0.classList.add('pos-11');
+        proj1.classList.add('pos-0');
+        proj2.classList.add('pos-1');
+        proj3.classList.add('pos-2');
+        proj4.classList.add('pos-3');
+        proj5.classList.add('pos-4');
+        proj6.classList.add('pos-5');
+        proj7.classList.add('pos-6');
+        proj8.classList.add('pos-7');
+        proj9.classList.add('pos-8');
+        proj10.classList.add('pos-9');
+        proj11.classList.add('pos-10');
+    };
+}
+
+function activateCourseProjects() {
     const scrollLeft = document.querySelector('.scroll-button.left');
     const scrollRight = document.querySelector('.scroll-button.right');
 
-    let scrollPos = 0;
-
     scrollLeft.addEventListener('click', () => {
-        if (scrollPos > 0) {
-            scrollPos -= scrollAmount;
-            extraProjects.style.transform = `translateX(-${scrollPos}px)`;
-        }
+        scrollCourseProjects('left');
     });
-
     scrollRight.addEventListener('click', () => {
-        scrollPos += scrollAmount;
-        extraProjects.style.transform = `translateX(-${scrollPos}px)`;
+        scrollCourseProjects('right')
     });
-}
+ }
 
 // Initalize skills section with skills active (coursework inactive)
 document.addEventListener('DOMContentLoaded', () => {
@@ -82,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePrismRotation();
     // activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
-    activateOtherProjects(); // other projects scrolling
+    activateCourseProjects(); // other projects scrolling
 });
 
 // Handle scroll event
