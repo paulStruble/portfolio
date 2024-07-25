@@ -413,10 +413,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 300px;
+    min-width: 320px;
+    height: 500px;
     border-radius: 15px;
     border: 2px solid black;
     padding: 20px;
+    margin: 0 5px;
     box-sizing: border-box;
 }
 
@@ -425,6 +427,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5em;
 }
 
 .extra-title {
@@ -444,8 +447,7 @@ footer {
 }
 
 .extra-text-wrapper p {
-    text-align: justify;
-    font-size: 10pt;
+    font-size: 11pt;
     margin: 5px 0 10px 0;
 }
 
