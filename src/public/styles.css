@@ -76,6 +76,7 @@ a {
     width: 100%;
     background-color: rgba(0, 0, 0, 75%);
     backdrop-filter: blur(15px);
+    z-index: 3;
 }
 
 .nav-title {
@@ -422,17 +423,24 @@ footer {
 .extra-header {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
 }
 
-.extra-header h4 {
+.extra-title {
+    display: flex;
+}
+
+.extra-title h4 {
     margin: 0;
 }
 
+.extra-title img {
+    margin-right: 5px;
+}
+
 .extra-header img {
-    max-height: 24px;
-    margin-right: 8px;
+    height: 24px;
 }
 
 .extra-text-wrapper p {
@@ -445,16 +453,15 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .extra-skills-container img {
-    height: 50px;
-    border: none;
-    margin: 10px 0;
+    height: 24px;
+    margin-left: 5px;
 }
 
-.extra-image {
+.extra-image-wrapper img {
     display: block;
     max-width: 100%;
     box-sizing: border-box;
