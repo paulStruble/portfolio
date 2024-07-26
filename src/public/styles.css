@@ -374,6 +374,7 @@ footer {
     height: 25px;
     border-radius: 100%;
     border: none;
+    cursor: pointer;
     z-index: 2;
 }
 
