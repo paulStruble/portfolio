@@ -164,13 +164,36 @@ footer {
 #landing-welcome {
     font-size: 72px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
     text-shadow: 0 0 10em, 0 0 4px;
+    margin: 0;
 }
 
 #paul {
     color: white;
     font-size: 2.5em;
+}
+
+.landing-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing-contacts a {
+    display: block;
+}
+
+.landing-contacts img {
+    display: block;
+    height: 50px;
+    transition: transform 0.2s ease-out;
+    filter: brightness(0) invert() drop-shadow(0 0 1.5px white);
+}
+
+.landing-contacts img:hover {
+    transform: scale(1.05);
 }
 
 #profile-image {
@@ -179,7 +202,7 @@ footer {
     margin: 0;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 0 150px black
+    box-shadow: 0 0 150px black;
 }
 
 #landing-gradient {
@@ -421,7 +444,7 @@ footer {
     border: 2px solid black;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     transition: transform 0.5s ease;
 }
 
