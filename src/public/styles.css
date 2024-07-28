@@ -554,10 +554,23 @@ footer {
 /* footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 50px;
+    height: fit-content;
+    margin-bottom: 16px;
 }
 
 footer p {
     font-size: 10pt;
+}
+
+.goto-top {
+    height: 16px;
+    width: 16px;
+    rotate: -90deg;
+    margin-bottom: 50px;
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 100%;
+    padding: 5px;
 }
