@@ -66,7 +66,7 @@ p {
     font-size: 17pt;
     font-weight: 400;
     margin: 0;
-    text-shadow: 0 0 5px rgba(235, 235, 235, .3);
+    text-shadow: 0 0 5px rgba(235, 235, 235, 0.3);
 }
 
 a {
@@ -131,8 +131,10 @@ em {
 
 .nav-links a:hover {
     /* color: hsl(0, 0%, 50%); */
-    color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 4px rgba(255, 255, 255 0.5);
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: hsl(215, 100%, 72%);
+    /* text-shadow: 0 0 4px rgba(255, 255, 255 0.5); */
+    text-shadow: 0 0 4px hsl(215, 100%, 72%);
 }
 
 /* main sections */
@@ -276,12 +278,17 @@ footer {
 
 .skills-wrapper {
     /* background-color: rgb(50, 50, 50); */
-    background-image: linear-gradient(to bottom, rgb(50, 50, 50), hsl(200, 20%, 20%));
+    background-image: linear-gradient(
+        to bottom,
+        rgb(50, 50, 50),
+        hsl(200, 20%, 20%)
+    );
     /* background-image: linear-gradient(to bottom right, rgb(50, 50, 50), hsl(180, 20%, 30%)); */
     border-radius: 20px;
     /* box-shadow: 0 0 5px, 0 0 20px, 0 0 5px inset; */
     /* box-shadow: 0 0 5px rgb(100, 100, 100) inset, 0 0 30px rgb(100, 100, 100) inset; */
-    box-shadow: 0 0 5px rgb(100, 100, 100) inset, 0 0 30px rgb(100, 100, 100) inset;
+    box-shadow: 0 0 5px rgb(100, 100, 100) inset,
+        0 0 30px rgb(100, 100, 100) inset;
     box-shadow: 0 0 5px rgb(80, 80, 80);
 }
 
@@ -316,7 +323,6 @@ footer {
     filter: saturate(1.35) drop-shadow(0 0 50px hsl(215, 50%, 72%));
 }
 
-
 #coursework-cointainer {
 }
 
@@ -337,7 +343,6 @@ footer {
     margin: 35px 0;
     border-left: 5px solid rgb(235, 235, 235);
 }
-
 
 .project-content {
     display: inline-block;
@@ -362,13 +367,13 @@ footer {
     display: block;
     max-width: 2.5em;
     flex-shrink: 0;
-    transition: transform ease 0.5s, filter ease 0.4s;
-    filter: brightness(0) invert() brightness(92%);
+    transition: transform ease 0.2s;
+    filter: brightness(0) invert() brightness(92%)
+        drop-shadow(0 0 15px hsl(180, 0%, 30%));
 }
 
 .project-github:hover {
     transform: scale(1.1);
-    filter: brightness(0) invert() brightness(92%) drop-shadow(0 0 3px rgb(235, 235, 235));
 }
 
 .project-skills-container {
@@ -410,7 +415,7 @@ footer {
 .scroll-button {
     font-family: poppins, sans-serif;
     font-weight: 900;
-    background-color: rgba(200, 200, 200, .8);
+    background-color: rgba(200, 200, 200, 0.8);
     display: inline-block;
     width: 26px;
     height: 26px;
@@ -419,7 +424,8 @@ footer {
     border: none;
     cursor: pointer;
     z-index: 2;
-    transition: transform 0.2s ease, background-color 0.5s ease, filter 0.5s ease;
+    transition: transform 0.2s ease, background-color 0.5s ease,
+        filter 0.5s ease;
     filter: drop-shadow(0 0 3px rgba(200, 200, 200, 0.8));
 }
 
@@ -579,7 +585,7 @@ button.scroll-button:hover {
 
 .extra-header img {
     height: 24px;
-    filter: drop-shadow(0 0 20px rgba(200, 200, 200, .5)) saturate(1.1);
+    filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.5)) saturate(1.1);
 }
 
 .extra-text-wrapper p {
@@ -631,7 +637,8 @@ footer p {
     background-color: rgba(200, 200, 200, 0.6);
     border-radius: 100%;
     padding: 5px;
-    transition: transform 0.2s ease, background-color 0.5s ease, filter 0.5s ease;
+    transition: transform 0.2s ease, background-color 0.5s ease,
+        filter 0.5s ease;
     filter: drop-shadow(0 0 3px rgba(200, 200, 200, 0.6));
 }
 
