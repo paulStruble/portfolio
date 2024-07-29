@@ -69,6 +69,11 @@ a {
     text-decoration: none;
 }
 
+em {
+    color: hsl(215, 100%, 72%);
+    font-style: normal;
+}
+
 /* navbar */
 
 .navbar {
