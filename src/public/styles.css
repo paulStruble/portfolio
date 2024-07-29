@@ -24,6 +24,10 @@
 
 /* global styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body,
 footer {
