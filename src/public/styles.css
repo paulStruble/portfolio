@@ -30,16 +30,13 @@ footer {
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
-    color: hsl(0, 0%, 10%);
+    /* color: hsl(0, 0%, 10%); */
+    color: rgb(235, 235, 235);
+    background-color: rgb(20, 20, 20);
 }
 
 main {
     margin: 0;
-}
-
-h1,
-h2 {
-    color: black;
 }
 
 h1 {
@@ -50,12 +47,22 @@ h1 {
 h2 {
     font-size: 64px;
     margin: 0;
+    text-shadow: 0 0 50px rgba(250, 250, 250, 0.3);
+}
+
+h3 {
+    text-shadow: 0 0 50px rgba(250, 250, 250, 0.2);
+}
+
+h4 {
+    text-shadow: 0 0 30px rgba(250, 250, 250, 0.4);
 }
 
 p {
     font-size: 17pt;
     font-weight: 400;
     margin: 0;
+    text-shadow: 0 0 5px rgba(235, 235, 235, .3);
 }
 
 a {
@@ -142,7 +149,7 @@ footer {
     height: 100vh;
     background-color: black;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
     transition: rotate 5s ease;
 }
 
@@ -159,6 +166,11 @@ footer {
     justify-content: space-around;
     height: 100vh;
     padding-top: 0;
+    z-index: 2;
+}
+
+#landing div {
+    z-index: 2;
 }
 
 #landing-welcome {
@@ -205,12 +217,6 @@ footer {
     box-shadow: 0 0 150px black;
 }
 
-#landing-gradient {
-    height: 15px;
-    width: 100vw;
-    background-image: linear-gradient(black, white);
-}
-
 /* intro section */
 
 .intro-content {
@@ -229,6 +235,7 @@ footer {
     width: 25%;
     height: auto;
     padding-left: 5%;
+    filter: drop-shadow(0 0 50px rgba(100, 100, 100, 0.3));
 }
 
 /* skills/coursework section */
@@ -255,13 +262,24 @@ footer {
 }
 
 #skills-container div {
-    background-color: rgb(242, 242, 242);
-    border-radius: 20px;
     margin: 20px;
+}
+
+.skills-wrapper {
+    background-color: rgb(50, 50, 50);
+    /* background-image: linear-gradient(to bottom right, rgb(50, 50, 50), hsl(180, 20%, 30%)); */
+    border-radius: 20px;
+    /* box-shadow: 0 0 5px, 0 0 20px, 0 0 5px inset; */
+    /* box-shadow: 0 0 5px rgb(100, 100, 100) inset, 0 0 30px rgb(100, 100, 100) inset; */
+    box-shadow: 0 0 5px rgb(100, 100, 100) inset, 0 0 30px rgb(100, 100, 100) inset;
+    box-shadow: 0 0 5px rgb(80, 80, 80);
 }
 
 #skills-container h3 {
     text-align: center;
+    /* color: white; */
+    text-shadow: 0 0 30px rgb(150, 150, 150);
+    /* text-shadow: 0 0 30px hsl(180, 80%, 30%); */
 }
 
 .skill-icons-container {
@@ -275,14 +293,16 @@ footer {
     /* background-color: black; */
     /* border: 7px black solid; */
     border-radius: 25%;
-    padding: 20px;
+    padding: 15px;
     margin: 20px;
 }
 
 .skill img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    filter: saturate(1.35) drop-shadow(0 0 30px rgb(100, 100, 100));
+    /* filter: saturate(1.35) drop-shadow(0 0 30px hsl(180, 40%, 30%)); */
 }
 
 #coursework-cointainer {
@@ -303,8 +323,9 @@ footer {
     /* border-radius: 20px; */
     padding: 10px 50px;
     margin: 35px 0;
-    border-left: 5px solid black;
+    border-left: 5px solid rgb(235, 235, 235);
 }
+
 
 .project-content {
     display: inline-block;
@@ -329,11 +350,13 @@ footer {
     display: block;
     max-width: 2.5em;
     flex-shrink: 0;
-    transition: transform ease 0.2s;
+    transition: transform ease 0.5s, filter ease 0.4s;
+    filter: brightness(0) invert() brightness(92%);
 }
 
 .project-github:hover {
     transform: scale(1.1);
+    filter: brightness(0) invert() brightness(92%) drop-shadow(0 0 3px rgb(235, 235, 235));
 }
 
 .project-skills-container {
@@ -346,6 +369,8 @@ footer {
     display: block;
     width: 50px;
     height: 50px;
+    /* filter: drop-shadow(0 0 15px rgb(0, 0, 0)); */
+    filter: drop-shadow(0 0 15px hsl(180, 0%, 30%));
 }
 
 .project-image-container {
@@ -361,6 +386,11 @@ footer {
     max-height: 100%;
     height: auto;
     border-radius: 25px;
+    /* border: solid 3px rgb(100, 100, 100); */
+    /* box-shadow: 0 0 20px rgb(10, 10, 10); */
+    /* box-shadow: 0 0 5px hsl(180, 40%, 20%);
+    box-shadow: 0 0 20px hsl(180, 40%, 20%); */
+    box-shadow: 0 0 30px rgba(100, 100, 100, 10%);
 }
 
 /* projects - extra */
@@ -406,7 +436,7 @@ footer {
 .extra-projects-wrapper::after {
     content: '';
     position: absolute;
-    width: 50px;
+    width: 200px;
     top: 0;
     bottom: 0;
     z-index: 1;
@@ -417,8 +447,8 @@ footer {
     left: 0;
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
+        rgba(20, 20, 20, 1),
+        rgba(20, 20, 20, 0)
     );
 }
 
@@ -426,8 +456,8 @@ footer {
     right: 0;
     background-image: linear-gradient(
         to left,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
+        rgba(20, 20, 20, 1),
+        rgba(20, 20, 20, 0)
     );
 }
 
@@ -442,11 +472,12 @@ footer {
     width: 320px;
     height: 500px;
     border-radius: 15px;
-    border: 2px solid black;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f2f2f2;
-    transition: transform 0.5s ease;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0 0 5px rgb(80, 80, 80);
+    filter: brightness(0.5) grayscale(0.8);
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .extra-project.pos-0 {
@@ -477,6 +508,7 @@ footer {
 /* CENTER */
 .extra-project.pos-6 {
     transform: translate(-50%, -50%) scale(1.1);
+    filter: none;
 }
 /* CENTER */
 
@@ -523,6 +555,7 @@ footer {
 
 .extra-header img {
     height: 24px;
+    filter: drop-shadow(0 0 20px rgba(200, 200, 200, .5)) saturate(1.1);
 }
 
 .extra-text-wrapper p {
@@ -546,9 +579,10 @@ footer {
     display: block;
     max-width: 100%;
     box-sizing: border-box;
-    border: solid black 5px;
+    /* border: solid black 5px; */
     border-radius: 15px;
     margin: 10px 0;
+    box-shadow: 0 0 22px rgba(100, 100, 100, 0.5);
 }
 
 /* footer */
@@ -570,7 +604,7 @@ footer p {
     width: 16px;
     rotate: -90deg;
     margin-bottom: 50px;
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(200, 200, 200, 0.6);
     border-radius: 100%;
     padding: 5px;
 }
