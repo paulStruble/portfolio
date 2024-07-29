@@ -271,7 +271,8 @@ footer {
 }
 
 .skills-wrapper {
-    background-color: rgb(50, 50, 50);
+    /* background-color: rgb(50, 50, 50); */
+    background-image: linear-gradient(to bottom, rgb(50, 50, 50), hsl(200, 20%, 20%));
     /* background-image: linear-gradient(to bottom right, rgb(50, 50, 50), hsl(180, 20%, 30%)); */
     border-radius: 20px;
     /* box-shadow: 0 0 5px, 0 0 20px, 0 0 5px inset; */
@@ -306,9 +307,11 @@ footer {
     display: block;
     width: 80px;
     height: 80px;
-    filter: saturate(1.35) drop-shadow(0 0 30px rgb(100, 100, 100));
+    /* filter: saturate(1.35) drop-shadow(0 0 30px rgb(100, 100, 100)); */
     /* filter: saturate(1.35) drop-shadow(0 0 30px hsl(180, 40%, 30%)); */
+    filter: saturate(1.35) drop-shadow(0 0 50px hsl(215, 50%, 72%));
 }
+
 
 #coursework-cointainer {
 }
