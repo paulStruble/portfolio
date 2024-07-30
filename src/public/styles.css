@@ -331,6 +331,7 @@ footer {
 #projects h3 {
     font-size: 32px;
     margin: 0;
+    z-index: 2;
 }
 
 .project {
