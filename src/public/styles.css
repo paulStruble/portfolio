@@ -148,6 +148,8 @@ footer {
     margin: 0 10%;
     scroll-margin-top: 34px;
     padding-top: 50px;
+    max-width: 1620px;
+    margin: auto;
 }
 
 /* landing section */
