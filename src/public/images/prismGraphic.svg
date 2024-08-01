@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 162">
   <defs>
     <style>
       .cls-1 {
         fill: #c71c1c;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
-        stroke-width: 0px;
-      }
-
       .cls-2 {
-        fill: #029548;
+        fill: #6a3382;
       }
 
       .cls-3 {
-        fill: #0276b3;
-      }
-
-      .cls-4 {
         fill: #fff;
       }
 
-      .cls-5 {
+      .cls-4 {
         fill: #e4d205;
       }
 
+      .cls-5 {
+        fill: #029548;
+      }
+
       .cls-6 {
-        fill: #6a3382;
+        fill: #0276b3;
       }
 
       .cls-7 {
@@ -35,11 +31,11 @@
       }
     </style>
   </defs>
-  <polygon class="cls-1" points="0 522 960 522 960 513 0 459 0 522"/>
-  <polygon class="cls-7" points="0 531 960 531 960 522 0 486 0 531"/>
-  <polygon class="cls-6" points="0 621 960 567 960 558 0 558 0 621"/>
-  <rect class="cls-4" x="960" y="531" width="960" height="18"/>
-  <polygon class="cls-3" points="0 594 960 558 960 549 0 549 0 594"/>
-  <polygon class="cls-5" points="0 552 960 545 960 531 0 514 0 552"/>
-  <polygon class="cls-2" points="0 567 960 549 960 540 0 540 0 567"/>
+  <polygon class="cls-1" points="0 63 960 63 960 54 0 0 0 63"/>
+  <polygon class="cls-7" points="0 72 960 72 960 63 0 27 0 72"/>
+  <polygon class="cls-2" points="0 162 960 108 960 99 0 99 0 162"/>
+  <rect class="cls-3" x="960" y="72" width="960" height="18"/>
+  <polygon class="cls-6" points="0 135 960 99 960 90 0 90 0 135"/>
+  <polygon class="cls-4" points="0 93 960 86 960 72 0 55 0 93"/>
+  <polygon class="cls-5" points="0 108 960 90 960 81 0 81 0 108"/>
 </svg>
