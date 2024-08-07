@@ -1,7 +1,6 @@
 function updatePrismPosition() {
     // get elements from DOM
     const profileImage = document.getElementById('profile-image');
-    const prismContainer = document.getElementById('landing-background');
     const prismGraphic = document.getElementById('prism-graphic');
 
     // get pfp and prism rectangles (for position/dimensions)
@@ -10,15 +9,15 @@ function updatePrismPosition() {
 
     // get coords for center of pfp
     const profileCenterX = profileBox.left + profileBox.width / 2;
-    const profileCenterY = profileBox.right + profileBox.height / 2;
+    const profileCenterY = profileBox.top + profileBox.height / 2;
 
     // calculate coords for prism
     const graphicLeft = profileCenterX - graphicBox.width / 2;
-    const graphicRight = profileCenterY - graphicBox.height / 2;
+    const graphicTop = profileCenterY - graphicBox.height / 2;
 
     // update coords for prism
     prismGraphic.style.left = `${graphicLeft}px`;
-    prismGraphic.style.right = `${graphicRight}px`;
+    prismGraphic.style.right = `${graphicTop}px`;
 }
 
 function updatePrismRotation() {
@@ -113,7 +112,7 @@ function scrollCourseProjects(direction) {
         proj9.classList.add('pos-8');
         proj10.classList.add('pos-9');
         proj11.classList.add('pos-10');
-    };
+    }
 }
 
 function activateCourseProjects() {
@@ -124,27 +123,28 @@ function activateCourseProjects() {
         scrollCourseProjects('left');
     });
     scrollRight.addEventListener('click', () => {
-        scrollCourseProjects('right')
+        scrollCourseProjects('right');
     });
- }
+}
 
 // Initalize skills section with skills active (coursework inactive)
 document.addEventListener('DOMContentLoaded', () => {
-    updatePrismPosition();
     updatePrismRotation();
+    updatePrismPosition();
     // activateSkillsSection('skills'); // load skills section
     setCopyrightYear();
     activateCourseProjects(); // other projects scrolling
+    setTimeout(updatePrismPosition, 50);
 });
 
 // Handle scroll event
 document.addEventListener('scroll', () => {
-    updatePrismPosition();
     updatePrismRotation();
+    updatePrismPosition();
 });
 
 // Handle resize event
 document.addEventListener('resize', () => {
-    updatePrismPosition();
     updatePrismRotation();
+    updatePrismPosition();
 });
