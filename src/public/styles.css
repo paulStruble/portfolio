@@ -649,3 +649,18 @@ footer p {
     background-color: rgba(235, 235, 235, 1);
     filter: drop-shadow(0 0 3px rgba(235, 235, 235, 1));
 }
+
+/* 404 */
+
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-content: center;
+    align-items: center;
+}
+
+.error-wrapper h1 {
+    margin: 0;
+    margin-top: 10vh;
+}
